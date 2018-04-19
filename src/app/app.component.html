@@ -1,20 +1,138 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div id="body" class="clearfix container" style="margin-top: 0 !important; padding-top:75px;">
+        <div  class="col-md-10 col-md-offset-1">
+        <ol class="breadcrumb">
+            <li><a href="/ibie/event">Liste des évènements</a></li>
+            <li class="active">Poetika Show Case</li>
+        </ol>
+    </div>
 
+        <br>
+    <div  class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+        <div id="container" class="col-md-9 col-sm-8 col-xs-12 npxs">
+            	<div class="thumbnail" style="overflow: hidden; position: inherit;">
+    <div class="image-pseudo">
+      <div class="image" style="background: url('http://127.0.0.1:8001/images/app/app.jpg') center 100% no-repeat;">
+        <p class="event-name">
+          <span class="col-md-12 col-sm-12 col-xs-12 text-image">
+          	<span class="title">Poetika Show Case</span>
+            <span class="date">
+              <i class="fa fa-calendar"></i>
+                              Le 22 December 2017 à 20:00
+                            </span>
+            <span class="date">
+              <span class="glyphicon glyphicon-map-marker"></span> <span  style="text-transform: uppercase;">Chillout Café Ambondrona‍</span>
+            </span>
+            <span class="address">
+                              <span class="price">Gratuit</span>
+                          </span>
+          </span>
+        </p>
+      </div>
+    </div>
+		<div class="caption" style="padding: 0;">
+      <div class="jumbotron">
+        <div class="share-div">
+          <a href="http://www.facebook.com/sharer.php?u=https://e-tsena.com/ibie/view/187&t=Poetika Show Case" class="share">
+            facebook
+          </a>
+          <div id="button-share" class="btn btn-primary">
+            <span class="glyphicon glyphicon-share"></span>
+          </div>
+        </div>
+        <h2>Description:</h2>
+        <p style="word-spacing: 2px;margin-left:15px;">
+          Poetika show case avec des GUEST
+        </p>
+        <h2>Organisateur:</h2>
+        <p style="word-spacing: 2px;margin-left:15px;">
+          Chillout
+        </p>
+        <h2>Type:</h2>
+        <p style="word-spacing: 2px;margin-left:15px;">
+          Concert ou spectacle
+        </p>
+      </div>
+		</div>
+	</div>
+<div>
+</div>
+        </div>
+        <div id="recent_subject" class="col-md-3 col-sm-4 col-xs-12">
+            <form action="/ibie/search/" method="POST">
+                <div class="input-group">
+                    <input type="text" class="form-control" name="query" placeholder="Rechercher un évènement" aria-describedby="basic-addon1" required>
+                    <span class="input-group-addon" id="search-addon">
+                        <button class="btn" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>                
+            </form>
+            <br>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-wygar btn-sm btn-block" data-toggle="modal" data-target="#myModal">
+              <span class="glyphicon glyphicon-calendar"></span> Voir <span class="hidden-sm">les évènements sur</span> l'agenda
+            </button>
+            <br>
+                        <div class="alert alert-danger text-center">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <strong>Oups !</strong><br> Réservation en ligne terminée
+        </div>
+      <div class="col-md-12" id="commentary">
+      <div id="comments_wrapper">
+                    <h3 class="comment_title">Commentaires</h3>
+          <div class="well comment_content" style="padding: 10px;">
+                            <div class="alert alert-info">Pas encore de commentaires.</div>
+                                
+          </div>
+          <div class="well col-md-12 col-sm-12 col-xs-12" style="padding: 10px;">
+              <form method="post" action="/ibie/187/comment/new/">
+                  <div class="form-group">
+                    <label class="sr-only required" for="wygar_mainbundle_eventcomment_name">votre pseudo</label>
+                    
+                    <input type="text" id="wygar_mainbundle_eventcomment_name" name="wygar_mainbundle_eventcomment[name]" required="required" class="form-control" placeholder="Votre pseudo" />
+                  </div>
+                  <div class="form-group">
+                    <label class="sr-only required" for="wygar_mainbundle_eventcomment_name">votre pseudo</label>
+                    
+                    <textarea id="wygar_mainbundle_eventcomment_comment" name="wygar_mainbundle_eventcomment[comment]" required="required" class="padT15 form form-control" rows="3" placeholder="votre commentaire"></textarea>
+                  </div>
+
+                  <input type="hidden" id="wygar_mainbundle_eventcomment__token" name="wygar_mainbundle_eventcomment[_token]" value="29655140da7922cc1899640486a763f41b34de45" />
+                  <button class="btn btn-info pull-right" style="margin-top:10px;" type="submit">commenter</button>
+              </form>
+          </div>
+      </div>
+  </div>
+        </div>
+    </div>
+    <div class="voile">
+        <div class="content-voile col-md-8 col-md-offset-2">
+            <p class="info-voile text-center">
+                Merci de bien vérifier les informations concernant votre évènement <br> avant de le publier. <br>
+                Toutes modifications et/ou annulations seront facturées à un coût forfaitaire de <br>20 000 Ar + tarifs iBié à rectifier.
+            </p>
+            <div class="col-md-6 col-sm-6 col-xs-5"><button id="voile-save" class="btn btn-info pull-right">Sauvegarder</button></div>
+            <div class="col-md-6 col-sm-6 col-xs-7"><button id="voile-publish" class="btn btn-success pull-left">Publier l'évènement</button></div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" style="margin-top:60px;" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">AGENDA</h4>
+          </div>
+          <div class="modal-body">
+            <div id="calendar" data-url="/ibie/ajax/"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+      
